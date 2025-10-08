@@ -34,40 +34,40 @@ export function TeamMemberCard({ member, index, variant = "default" }: TeamMembe
         onClick={() => navigate(`/profile/${member.id}`)}
         className="border border-border bg-card hover:border-foreground/20 transition-all cursor-pointer group"
       >
-        <div className="flex flex-col md:flex-row">
-          <div className="flex-1 p-12">
-            <div className="flex items-start justify-between mb-6">
+        <div className="flex flex-row">
+          <div className="flex-1 p-6 md:p-8">
+            <div className="flex items-start justify-between mb-4">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight mb-3">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-2">
                   {member.name}
                 </h2>
-                <p className="text-base text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground mb-3">
                   {member.education}
                 </p>
               </div>
               {member.available && (
-                <span className="text-xs px-4 py-2 bg-foreground text-background font-medium">
+                <span className="text-xs px-3 py-1 bg-foreground text-background font-medium whitespace-nowrap">
                   Available
                 </span>
               )}
             </div>
 
             {member.bio && (
-              <p className="text-base leading-relaxed mb-8 text-muted-foreground">
+              <p className="text-sm leading-relaxed mb-4 text-muted-foreground line-clamp-2">
                 {member.bio}
               </p>
             )}
 
-            <div className="space-y-6 mb-8">
+            <div className="space-y-4 mb-4">
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
                   Expertise
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {member.expertise.map((skill) => (
+                <div className="flex flex-wrap gap-1.5">
+                  {member.expertise.slice(0, 3).map((skill) => (
                     <span
                       key={skill}
-                      className="text-sm px-4 py-2 border border-border"
+                      className="text-xs px-3 py-1 border border-border"
                     >
                       {skill}
                     </span>
@@ -76,24 +76,24 @@ export function TeamMemberCard({ member, index, variant = "default" }: TeamMembe
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
                   Tech Stack
                 </p>
-                <p className="text-base">{member.techStack.join(", ")}</p>
+                <p className="text-sm line-clamp-1">{member.techStack.join(", ")}</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 text-sm font-medium group-hover:gap-4 transition-all">
+            <div className="flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
               <span>View Full Profile</span>
               <ArrowRight className="h-4 w-4" />
             </div>
           </div>
 
-          <div className="md:w-1/2 min-h-[400px] md:min-h-[500px]">
+          <div className="w-32 sm:w-40 md:w-64 shrink-0">
             <img
               src={member.photo}
               alt={member.name}
-              className="w-full h-full object-cover border-t md:border-t-0 md:border-l border-border"
+              className="w-full h-full object-cover border-l border-border"
             />
           </div>
         </div>
