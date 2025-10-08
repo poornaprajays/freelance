@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Mail } from "lucide-react";
+import { ExternalLink, Mail, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router";
 
 interface TeamMember {
   id: string;
@@ -12,20 +13,101 @@ interface TeamMember {
   techStack: string[];
   email: string;
   available: boolean;
+  bio?: string;
 }
 
 interface TeamMemberCardProps {
   member: TeamMember;
   index: number;
+  variant?: "default" | "featured";
 }
 
-export function TeamMemberCard({ member, index }: TeamMemberCardProps) {
+export function TeamMemberCard({ member, index, variant = "default" }: TeamMemberCardProps) {
+  const navigate = useNavigate();
+
+  if (variant === "featured") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        onClick={() => navigate(`/profile/${member.id}`)}
+        className="border border-border bg-card hover:border-foreground/20 transition-all cursor-pointer group"
+      >
+        <div className="flex flex-col md:flex-row">
+          <div className="flex-1 p-12">
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight mb-3">
+                  {member.name}
+                </h2>
+                <p className="text-base text-muted-foreground mb-4">
+                  {member.education}
+                </p>
+              </div>
+              {member.available && (
+                <span className="text-xs px-4 py-2 bg-foreground text-background font-medium">
+                  Available
+                </span>
+              )}
+            </div>
+
+            {member.bio && (
+              <p className="text-base leading-relaxed mb-8 text-muted-foreground">
+                {member.bio}
+              </p>
+            )}
+
+            <div className="space-y-6 mb-8">
+              <div>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
+                  Expertise
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {member.expertise.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-sm px-4 py-2 border border-border"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
+                  Tech Stack
+                </p>
+                <p className="text-base">{member.techStack.join(", ")}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 text-sm font-medium group-hover:gap-4 transition-all">
+              <span>View Full Profile</span>
+              <ArrowRight className="h-4 w-4" />
+            </div>
+          </div>
+
+          <div className="md:w-1/2 min-h-[400px] md:min-h-[500px]">
+            <img
+              src={member.photo}
+              alt={member.name}
+              className="w-full h-full object-cover border-t md:border-t-0 md:border-l border-border"
+            />
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="border border-border bg-card p-8 hover:border-foreground/20 transition-colors"
+      onClick={() => navigate(`/profile/${member.id}`)}
+      className="border border-border bg-card p-8 hover:border-foreground/20 transition-colors cursor-pointer group"
     >
       <div className="flex items-start gap-6 mb-6">
         <img
@@ -77,7 +159,10 @@ export function TeamMemberCard({ member, index }: TeamMemberCardProps) {
             variant="default"
             size="sm"
             className="flex-1"
-            onClick={() => window.open(`mailto:${member.email}`, "_blank")}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(`mailto:${member.email}`, "_blank");
+            }}
           >
             <Mail className="h-4 w-4 mr-2" />
             Contact
@@ -86,7 +171,10 @@ export function TeamMemberCard({ member, index }: TeamMemberCardProps) {
             variant="outline"
             size="sm"
             className="flex-1"
-            onClick={() => window.open(member.portfolio, "_blank")}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(member.portfolio, "_blank");
+            }}
           >
             <ExternalLink className="h-4 w-4 mr-2" />
             Portfolio

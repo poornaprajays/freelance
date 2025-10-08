@@ -8,7 +8,31 @@
     "education": "Pursuing BE in AIML",
     "techStack": ["MERN Stack", "Django", "Flask"],
     "email": "poorna@example.com",
-    "available": true
+    "available": true,
+    "bio": "Passionate full-stack developer with expertise in building scalable web applications. Specialized in modern JavaScript frameworks and Python-based backend systems. Committed to writing clean, maintainable code and delivering exceptional user experiences.",
+    "workHistory": [
+      {
+        "projectName": "E-Commerce Platform",
+        "company": "TechCorp Solutions",
+        "description": "Built a full-featured e-commerce platform with real-time inventory management, payment integration, and admin dashboard.",
+        "link": "https://example-ecommerce.com",
+        "duration": "Jan 2024 - Mar 2024"
+      },
+      {
+        "projectName": "Healthcare Management System",
+        "company": "MediTech Inc",
+        "description": "Developed a comprehensive healthcare management system with patient records, appointment scheduling, and telemedicine features.",
+        "link": "https://example-healthcare.com",
+        "duration": "Sep 2023 - Dec 2023"
+      },
+      {
+        "projectName": "Social Media Analytics Dashboard",
+        "company": "DataViz Pro",
+        "description": "Created an analytics dashboard for social media metrics with real-time data visualization and reporting capabilities.",
+        "link": "https://example-analytics.com",
+        "duration": "Jun 2023 - Aug 2023"
+      }
+    ]
   },
   {
     "id": "2",
@@ -19,7 +43,24 @@
     "education": "BTech in Computer Science",
     "techStack": ["React Native", "Flutter", "Figma"],
     "email": "vikram@example.com",
-    "available": true
+    "available": true,
+    "bio": "Mobile-first developer and designer with a keen eye for creating intuitive user experiences. Expert in cross-platform mobile development and modern design principles.",
+    "workHistory": [
+      {
+        "projectName": "Fitness Tracking App",
+        "company": "HealthTech Startup",
+        "description": "Designed and developed a comprehensive fitness tracking application with workout plans, nutrition tracking, and social features.",
+        "link": "https://example-fitness.com",
+        "duration": "Feb 2024 - Apr 2024"
+      },
+      {
+        "projectName": "Food Delivery Platform",
+        "company": "QuickEats",
+        "description": "Built a mobile app for food delivery with real-time tracking, payment integration, and restaurant management.",
+        "link": "https://example-food.com",
+        "duration": "Oct 2023 - Jan 2024"
+      }
+    ]
   },
   {
     "id": "3",
@@ -30,7 +71,24 @@
     "education": "MSc in Data Science",
     "techStack": ["Python", "TensorFlow", "PyTorch", "Scikit-learn"],
     "email": "ananya@example.com",
-    "available": true
+    "available": true,
+    "bio": "Data scientist specializing in machine learning and predictive analytics. Experienced in building ML models for real-world business problems and deriving actionable insights from complex datasets.",
+    "workHistory": [
+      {
+        "projectName": "Customer Churn Prediction",
+        "company": "RetailCorp",
+        "description": "Developed ML models to predict customer churn with 92% accuracy, enabling proactive retention strategies.",
+        "link": "https://example-churn.com",
+        "duration": "Mar 2024 - May 2024"
+      },
+      {
+        "projectName": "Fraud Detection System",
+        "company": "FinSecure",
+        "description": "Built a real-time fraud detection system using deep learning to identify suspicious transactions.",
+        "link": "https://example-fraud.com",
+        "duration": "Nov 2023 - Feb 2024"
+      }
+    ]
   },
   {
     "id": "4",
@@ -41,7 +99,24 @@
     "education": "BE in Information Technology",
     "techStack": ["Node.js", "Docker", "Kubernetes", "AWS"],
     "email": "rahul@example.com",
-    "available": false
+    "available": false,
+    "bio": "Backend engineer and DevOps specialist focused on building robust, scalable infrastructure. Expert in cloud architecture, containerization, and CI/CD pipelines.",
+    "workHistory": [
+      {
+        "projectName": "Microservices Architecture",
+        "company": "CloudTech Solutions",
+        "description": "Architected and deployed a microservices-based system handling 1M+ daily requests with 99.9% uptime.",
+        "link": "https://example-microservices.com",
+        "duration": "Jan 2024 - Present"
+      },
+      {
+        "projectName": "CI/CD Pipeline Automation",
+        "company": "DevOps Pro",
+        "description": "Implemented automated CI/CD pipelines reducing deployment time by 70% and improving code quality.",
+        "link": "https://example-cicd.com",
+        "duration": "Aug 2023 - Dec 2023"
+      }
+    ]
   },
   {
     "id": "5",
@@ -52,6 +127,23 @@
     "education": "BDes in Interaction Design",
     "techStack": ["React", "Vue.js", "Tailwind CSS", "Framer Motion"],
     "email": "priya@example.com",
-    "available": true
+    "available": true,
+    "bio": "Frontend developer and UI/UX designer passionate about creating beautiful, accessible web experiences. Specialized in modern frontend frameworks and animation design.",
+    "workHistory": [
+      {
+        "projectName": "Design System Library",
+        "company": "DesignCo",
+        "description": "Created a comprehensive design system and component library used across 15+ products.",
+        "link": "https://example-designsystem.com",
+        "duration": "Feb 2024 - Apr 2024"
+      },
+      {
+        "projectName": "Portfolio Website Builder",
+        "company": "WebBuilder Inc",
+        "description": "Developed a drag-and-drop portfolio builder with 50+ customizable templates and themes.",
+        "link": "https://example-builder.com",
+        "duration": "Sep 2023 - Jan 2024"
+      }
+    ]
   }
 ]
