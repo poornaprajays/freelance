@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 interface TeamMember {
   id: string;
   name: string;
+  photo: string;
   expertise: string[];
   portfolio: string;
   education: string;
@@ -26,16 +27,25 @@ export function TeamMemberCard({ member, index }: TeamMemberCardProps) {
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="border border-border bg-card p-8 hover:border-foreground/20 transition-colors"
     >
-      <div className="flex items-start justify-between mb-6">
-        <div>
-          <h3 className="text-xl font-bold tracking-tight mb-2">{member.name}</h3>
-          <p className="text-sm text-muted-foreground">{member.education}</p>
+      <div className="flex items-start gap-6 mb-6">
+        <img
+          src={member.photo}
+          alt={member.name}
+          className="w-20 h-20 border border-border bg-muted"
+        />
+        <div className="flex-1">
+          <div className="flex items-start justify-between">
+            <div>
+              <h3 className="text-xl font-bold tracking-tight mb-2">{member.name}</h3>
+              <p className="text-sm text-muted-foreground">{member.education}</p>
+            </div>
+            {member.available && (
+              <span className="text-xs px-3 py-1 bg-foreground text-background font-medium">
+                Available
+              </span>
+            )}
+          </div>
         </div>
-        {member.available && (
-          <span className="text-xs px-3 py-1 bg-foreground text-background font-medium">
-            Available
-          </span>
-        )}
       </div>
 
       <div className="space-y-6">

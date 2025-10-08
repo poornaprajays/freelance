@@ -2,6 +2,7 @@
   {
     "id": "1",
     "name": "Poorna Prajay S",
+    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Poorna",
     "expertise": ["Web Development", "Full Stack"],
     "portfolio": "https://vikasrp.vercel.app",
     "education": "Pursuing BE in AIML",
@@ -12,6 +13,7 @@
   {
     "id": "2",
     "name": "Vikram Kumar",
+    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram",
     "expertise": ["Mobile Development", "UI/UX Design"],
     "portfolio": "https://vikram-portfolio.vercel.app",
     "education": "BTech in Computer Science",
@@ -22,6 +24,7 @@
   {
     "id": "3",
     "name": "Ananya Sharma",
+    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ananya",
     "expertise": ["Data Science", "Machine Learning"],
     "portfolio": "https://ananya-ds.vercel.app",
     "education": "MSc in Data Science",
@@ -32,6 +35,7 @@
   {
     "id": "4",
     "name": "Rahul Mehta",
+    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul",
     "expertise": ["Backend Development", "DevOps"],
     "portfolio": "https://rahul-backend.vercel.app",
     "education": "BE in Information Technology",
@@ -42,6 +46,7 @@
   {
     "id": "5",
     "name": "Priya Reddy",
+    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya",
     "expertise": ["Frontend Development", "UI/UX Design"],
     "portfolio": "https://priya-design.vercel.app",
     "education": "BDes in Interaction Design",
