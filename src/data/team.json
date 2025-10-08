@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Poorna Prajay S",
+    "expertise": ["Web Development", "Full Stack"],
+    "portfolio": "https://vikasrp.vercel.app",
+    "education": "Pursuing BE in AIML",
+    "techStack": ["MERN Stack", "Django", "Flask"],
+    "email": "poorna@example.com",
+    "available": true
+  },
+  {
+    "id": "2",
+    "name": "Vikram Kumar",
+    "expertise": ["Mobile Development", "UI/UX Design"],
+    "portfolio": "https://vikram-portfolio.vercel.app",
+    "education": "BTech in Computer Science",
+    "techStack": ["React Native", "Flutter", "Figma"],
+    "email": "vikram@example.com",
+    "available": true
+  },
+  {
+    "id": "3",
+    "name": "Ananya Sharma",
+    "expertise": ["Data Science", "Machine Learning"],
+    "portfolio": "https://ananya-ds.vercel.app",
+    "education": "MSc in Data Science",
+    "techStack": ["Python", "TensorFlow", "PyTorch", "Scikit-learn"],
+    "email": "ananya@example.com",
+    "available": true
+  },
+  {
+    "id": "4",
+    "name": "Rahul Mehta",
+    "expertise": ["Backend Development", "DevOps"],
+    "portfolio": "https://rahul-backend.vercel.app",
+    "education": "BE in Information Technology",
+    "techStack": ["Node.js", "Docker", "Kubernetes", "AWS"],
+    "email": "rahul@example.com",
+    "available": false
+  },
+  {
+    "id": "5",
+    "name": "Priya Reddy",
+    "expertise": ["Frontend Development", "UI/UX Design"],
+    "portfolio": "https://priya-design.vercel.app",
+    "education": "BDes in Interaction Design",
+    "techStack": ["React", "Vue.js", "Tailwind CSS", "Framer Motion"],
+    "email": "priya@example.com",
+    "available": true
+  }
+]
