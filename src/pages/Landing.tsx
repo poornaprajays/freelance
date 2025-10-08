@@ -24,10 +24,6 @@ export default function Landing() {
     );
   }, [selectedFilter]);
 
-  // Featured member (first in the list)
-  const featuredMember = teamData[0];
-  const otherMembers = filteredTeam.filter((m) => m.id !== featuredMember.id);
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -63,23 +59,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Featured Member */}
-      <section className="border-b border-border">
-        <div className="max-w-7xl mx-auto px-8 py-16">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-6"
-          >
-            <p className="text-xs uppercase tracking-wider text-muted-foreground">
-              Featured Developer
-            </p>
-          </motion.div>
-          <TeamMemberCard member={featuredMember} index={0} variant="featured" />
-        </div>
-      </section>
-
       {/* Filter Section */}
       <section className="border-b border-border">
         <div className="max-w-7xl mx-auto px-8 py-8">
@@ -108,7 +87,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Team Grid */}
+      {/* Team Members - Full Width */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
@@ -118,18 +97,18 @@ export default function Landing() {
             className="mb-8"
           >
             <p className="text-sm text-muted-foreground">
-              Showing {otherMembers.length} developer
-              {otherMembers.length !== 1 ? "s" : ""}
+              Showing {filteredTeam.length} developer
+              {filteredTeam.length !== 1 ? "s" : ""}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherMembers.map((member, index) => (
-              <TeamMemberCard key={member.id} member={member} index={index} variant="default" />
+          <div className="space-y-6">
+            {filteredTeam.map((member, index) => (
+              <TeamMemberCard key={member.id} member={member} index={index} variant="featured" />
             ))}
           </div>
 
-          {otherMembers.length === 0 && (
+          {filteredTeam.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
