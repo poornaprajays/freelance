@@ -248,7 +248,6 @@ When using convex, make sure:
 - Document IDs are referenced as `_id` field, not `id`.
 - Document ID types are referenced as `Id<"TableName">`, not `string`.
 - Document object types are referenced as `Doc<"TableName">`.
-- Keep schemaValidation to false in the schema file.
 - You must correctly type your code so that it passes the type checker.
 - Always use the `@/folder` path, with `@/convex/folder/file.ts` syntax for importing convex files.
 - This includes importing generated files like `@/convex/_generated/server`, `@/convex/_generated/api`
