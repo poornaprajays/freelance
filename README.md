@@ -49,12 +49,6 @@ On the `src/convex/users.ts` file, you can use the `getCurrentUser` function to 
 
 The `/auth` page is already set up to use auth. Navigate to `/auth` for all log in / sign up sequences.
 
-You MUST use this hook to get user data. Never do this yourself without the hook:
-```typescript
-import { useAuth } from "@/hooks/use-auth";
-
-const { isLoading, isAuthenticated, user, signIn, signOut } = useAuth();
-```
 
 ## Protected Routes
 
