@@ -38,7 +38,7 @@ You must follow these conventions when using authentication.
 
 All convex authentication functions are already set up. The auth currently uses email OTP and anonymous users, but can support more.
 
-The email OTP configuration is defined in `src/convex/auth/emailOtp.ts`. DO NOT MODIFY THIS FILE.
+
 
 Also, DO NOT MODIFY THESE AUTH FILES: `src/convex/auth.config.ts` and `src/convex/auth.ts`.
 
