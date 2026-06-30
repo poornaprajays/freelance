@@ -103,7 +103,7 @@ Follow these conventions when using Shad CN components, which you should use by 
 
 
 
-- Make it well animated and fit a certain "theme", 
+
 
 Use known images and emojis from online.
 
