@@ -40,7 +40,6 @@ All convex authentication functions are already set up. The auth currently uses 
 
 
 
-Also, DO NOT MODIFY THESE AUTH FILES: `src/convex/auth.config.ts` and `src/convex/auth.ts`.
 
 ## Using Convex Auth on the backend
 
