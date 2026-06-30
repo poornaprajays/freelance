@@ -101,7 +101,6 @@ Follow these conventions when using Shad CN components, which you should use by 
 - Avoid skeletons; instead, use the loader2 component to show a spinning loading state when loading data.
 
 
-## Landing Pages
 
 You must always create good-looking designer-level styles to your application. 
 - Make it well animated and fit a certain "theme", ie neo brutalist, retro, neumorphism, glass morphism, etc
