@@ -105,7 +105,7 @@ Follow these conventions when using Shad CN components, which you should use by 
 
 
 
-Use known images and emojis from online.
+
 
 If the user is logged in already, show the get started button to say "Dashboard" or "Profile" instead to take them there.
 
