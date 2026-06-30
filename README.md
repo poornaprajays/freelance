@@ -102,7 +102,7 @@ Follow these conventions when using Shad CN components, which you should use by 
 
 
 
-You must always create good-looking designer-level styles to your application. 
+
 - Make it well animated and fit a certain "theme", ie neo brutalist, retro, neumorphism, glass morphism, etc
 
 Use known images and emojis from online.
